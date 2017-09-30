@@ -17,9 +17,9 @@ class AnagraficaClienteController extends Controller
         ];
         //tiro su solo due colonne
         //fare la query davanbti ed in fondo il get con le colonne volute
-        $dataC = $clienteM::where($arWhere)->orderBy('id', 'desc')->get(['nome', 'cognome']);
+        $dataC = $clienteM::where($arWhere)->orderBy('id', 'desc')->get(['id','nome', 'cognome']);
 
-        return view('anagrafica-cliente.index');
+        return view('anagrafica-cliente.index')->with(['dataC' => $dataC]);
     }
 
     public function create()

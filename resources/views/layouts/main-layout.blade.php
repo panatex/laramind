@@ -38,6 +38,10 @@
 {{-- e:Includo il menu di navigazione --}}
 
 
+<div class="container">
+    @yield('pageContent')
+</div>
+
 @stack('footer-script')
 </body>
 </html>
