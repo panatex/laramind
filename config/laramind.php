@@ -7,5 +7,6 @@
  */
 
 return [
-    'LogoFolder' => 'logo'
+    'LogoFolder' => 'logo',
+    'UploadFolder' => 'loghi',
 ];

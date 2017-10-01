@@ -26,7 +26,7 @@ Route::group(['prefix' => '/anagrafica-clienti'], function (){
     Route::get('/show/{id}','AnagraficaClienteController@show')->name('anagrafica-clienti.show')->where('id','[0-9]+');
     Route::post('/store','AnagraficaClienteController@store')->name('anagrafica-clienti.store');
     Route::get('/update/{id}','AnagraficaClienteController@update')->name('anagrafica-clienti.update')->where('id','[0-9]+');
-    Route::post('/updateApply','AnagraficaClienteController@updateApply')->name('anagrafica-clienti.updateApply');
+    Route::post('/updateApply/{id}','AnagraficaClienteController@updateApply')->name('anagrafica-clienti.updateApply');
     Route::get('/delete/{id}','AnagraficaClienteController@delete')->name('anagrafica-clienti.delete')->where('id','[0-9]+');
 
 
