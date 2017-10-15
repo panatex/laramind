@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
         //richiamo il faker
         //secondo parametro numero record da creare
         //
-        factory(\App\Models\AnagraficaClienti::class, 10)->create()->each(function ($cliente){
+        factory(\App\Models\AnagraficaClienti::class, 10)->create()->each(function ($cliente) {
             Log::info($cliente->id);
             //passo alla facrtory dell'oridne tramite la create id che deve essere assegnato per poter agganciare i dati tra anagrafica ed ordine usando i nomi delle colonne
-            factory(\App\Models\Ordini::class,5)->create(['anagrafica__clienti_id' => $cliente->id]);
+            factory(\App\Models\Ordini::class, 5)->create(['anagrafica__clienti_id' => $cliente->id]);
         });
 
     }

@@ -31,6 +31,9 @@
         }
     </style>
 
+    {{-- fogli di stile di tutta la app--}}
+    <link rel="stylesheet" href="/css/stili.css" />
+
 </head>
 <body>
 {{-- s:Includo il menu di navigazione --}}

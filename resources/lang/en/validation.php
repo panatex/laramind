@@ -103,6 +103,12 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        //--- nome del campo
+        'allegati' => [
+            'required' => 'custom-message',
+            ''
+        ]
+
     ],
 
     /*

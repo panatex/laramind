@@ -12,6 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        //mettere le url non validate dal token
+        '/test-middleware',
+        '/ws/create-anagrafica',
+        '/ws/create-anagrafica-bigdata'
+
     ];
 }

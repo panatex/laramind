@@ -9,6 +9,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 
 
+    {{-- fogli di stile di tutta la app--}}
+    <link rel="stylesheet" href="/css/stiliSpecificiperquestavista.css" />
+
 @endpush
 
 @push('footer-script')

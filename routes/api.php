@@ -14,3 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('anagrafica-detail/{id}', 'AnagraficaClienteController@getAnagraficaDetail')->name('api.anagrafica-clienti.detail');
+//api in scrittura web services
+Route::post('/ws/create-anagrafica','AnagraficaClienteController@postAnagraficaDetail')->name('api.post');
+
+Route::post('/ws/create-anagrafica-bigdata','AnagraficaClienteController@postAnagraficaDetailBigData');

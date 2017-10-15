@@ -23,6 +23,23 @@
         </div>
     @endif
 
+    @if (session('flash_error'))
+        <div class="alert alert-danger">
+            {{ session('flash_error') }}
+        </div>
+    @endif
+
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ ucfirst($error) }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -42,6 +59,7 @@
                     {{--aggiungere i pulsantei con delle include--}}
                     @include('includes.anagrafica-link-visualizza',['id' => $row->id ])
                     @include('includes.anagrafica-link-modifica',['id' => $row->id ])
+                    @include('includes.anagrafica-link-cancella',['id' => $row->id ])
                 </td>
             </tr>
         @endforeach

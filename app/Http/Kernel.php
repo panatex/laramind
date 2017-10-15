@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\VerifyCustomConditions;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -57,5 +58,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'verify-custom' => \App\Http\Middleware\VerifyCustomConditions::class,
     ];
 }

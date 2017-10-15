@@ -122,8 +122,13 @@
 
 </div>
 
+@if($anagrafica['logo'])
+<img src="{{$logoPath}}" width="500px">
+@endif
+
+
 <div class="form-group row">
-   <div class="col-md-2 control-label">&nbsp;</div>
+    <div class="col-md-2 control-label">&nbsp;</div>
     <div class="col-md-6">
         {!! Form::submit('Invia Dati',['class' => 'btn btn-primary']) !!}
     </div>
